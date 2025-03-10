@@ -28,11 +28,16 @@ ul {
     align-items: center;
 }
 .container {
-    width: 85%;
+    width: 80%;
     padding-left:20px;
     padding-right: 20px;
     margin-right: auto;
     margin-left: auto;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
 }
 .logo {
     font-family: "Aref Ruqaa", serif;
