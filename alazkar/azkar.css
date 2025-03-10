@@ -1,0 +1,95 @@
+:root {
+  --main-padding: 80px;
+  --background-color-l: rgba(243, 204, 89, 0.22);
+  --background-color-s: rgb(61, 27, 7);
+  --main-transition: 0.3s;
+  --text-color:rgb(239, 186, 28);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+/* Alazkar Section */
+.alazkar {
+  padding: var(--main-padding) 0;
+  background: white;
+}
+h1.main-title {
+  width: fit-content;
+  margin: 0px auto 30px;
+  font-size: 50px;
+  color: var(--text-color)
+}
+.alazkar .holder {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.alazkar .holder .titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  background: var(--background-color-l);
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+.alazkar .holder .titles a {
+  display: inline-block;
+  position: relative;
+  padding: 20px 35px;
+  border: 1px solid rgba(154, 38, 38, 0.21);
+  color: var(--background-color-s);
+  font-size: 22px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: var(--main-transition)
+}
+.alazkar .holder .titles a:hover {
+  background: brown;
+  color: var(--text-color);
+}
+
+.alazkar .holder .pages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 70px 0;
+  transition: var(--main-transition);
+}
+.alazkar .holder .pages a {
+  display: block;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--text-color);
+  background: var(--background-color-l);
+  transition: var(--main-transition);
+}
+.alazkar .holder .pages a:hover {
+  transform: scale(1.08, 1.08);
+  box-shadow: 4px 4px 20px 0 rgb(0 0 0 / 15%);
+}
+.alazkar .holder .pages a .image img {
+  max-width: 100%;
+  height: fit;
+  border-radius: 12px 12px 0 0;
+}
+.alazkar .holder .pages .text {
+  padding: 30px;
+}
+.alazkar .holder .pages a h2 {
+  margin: 0 0 15px 0;
+  font-size: 25px;
+}
+.alazkar .holder .pages a p {
+  font-size: 17px;
+}
