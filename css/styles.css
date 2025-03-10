@@ -1,17 +1,27 @@
+:root {
+  --main-padding: 80px;
+  --background-color-l: rgba(243, 204, 89, 0.22);
+  --background-color-s: rgb(61, 27, 7);
+  --main-transition: 0.3s;
+  --text-color:rgb(239, 186, 28);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background:rgba(243, 204, 89, 0.22);
+  background:var(--background-color-l);
   font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+a {
+  text-decoration: none;
 }
 .sirah {
   position: relative;
   margin: 80px auto;
   max-width: 1200px;
-  background-color:rgb(61, 27, 7);
+  background-color: var(--background-color-s);
 }
 .sirah h1 {
   color: #f3cc59;
@@ -23,7 +33,7 @@ body {
   font-size: 3rem;
   padding-top: 30px;
 }
-.sirah .container {
+.sirah .cnt {
   position: relative;
   padding: 10px 50px;
   width: 50%;
@@ -40,31 +50,31 @@ body {
     transform: translateY(0);
   }
 }
-.sirah .container:nth-child(1) {
+.sirah .cnt:nth-child(1) {
   animation-delay: 0s;
 }
-.sirah .container:nth-child(2) {
+.sirah .cnt:nth-child(2) {
   animation-delay: 1s;
 }
-.sirah .container:nth-child(3) {
+.sirah .cnt:nth-child(3) {
   animation-delay: 2s;
 }
-.sirah .container:nth-child(4) {
+.sirah .cnt:nth-child(4) {
   animation-delay: 3s;
 }
-.sirah .container:nth-child(5) {
+.sirah .cnt:nth-child(5) {
   animation-delay: 4s;
 }
-.sirah .container:nth-child(6) {
+.sirah .cnt:nth-child(6) {
   animation-delay: 5s;
 }
-.sirah .container:nth-child(7) {
+.sirah .cnt:nth-child(7) {
   animation-delay: 6s;
 }
-.sirah .container:nth-child(8) {
+.sirah .cnt:nth-child(8) {
   animation-delay: 7s;
 }
-.sirah .container:nth-child(9) {
+.sirah .cnt:nth-child(9) {
   animation-delay: 8s;
 }
 .sirah .right-container {
@@ -116,11 +126,11 @@ body {
   .sirah::before {
     left: calc(100% - 20px);
   }
-  .sirah .container {
+  .sirah .cnt {
     width: 100%;
     right: 0;
   }
-  .sirah .container::after {
+  .sirah .cnt::after {
     left: calc(100% - 63px);
     border-color: transparent  #f3cc59 transparent transparent;
   } 
