@@ -1,5 +1,5 @@
 :root {
-  --main-padding: 80px;
+  --main-padding: 60px;
   --background-color-l: rgba(243, 204, 89, 0.22);
   --background-color-s: rgb(61, 27, 7);
   --main-transition: 0.3s;
@@ -16,7 +16,7 @@ body {
 a {
   text-decoration: none;
 }
-/* Alazkar Section */
+
 .alazkar {
   padding: var(--main-padding) 0;
   background: white;
@@ -25,13 +25,21 @@ h1.main-title {
   width: fit-content;
   margin: 0px auto 30px;
   font-size: 50px;
-  color: var(--text-color)
+  color: var(--text-color);
 }
-.alazkar .holder {
-  padding-left: 20px;
-  padding-right: 20px;
+.container {
+    width: 80%;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.alazkar .holder .titles {
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+.alazkar .titles {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,53 +51,56 @@ h1.main-title {
   margin: 0 auto;
   border-radius: 50px;
 }
-.alazkar .holder .titles a {
+.alazkar .titles a {
   display: inline-block;
   position: relative;
-  padding: 20px 35px;
+  padding: 1.2rem 2rem;
   border: 1px solid rgba(154, 38, 38, 0.21);
   color: var(--background-color-s);
   font-size: 22px;
   border-radius: 40px;
   text-decoration: none;
-  transition: var(--main-transition)
+  transition: var(--main-transition);
+  background: rgb(240 240 240);
 }
-.alazkar .holder .titles a:hover {
+.alazkar .titles a:hover {
   background: brown;
   color: var(--text-color);
 }
 
-.alazkar .holder .pages {
+.alazkar .pages {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 25px;
   padding: 70px 0;
   transition: var(--main-transition);
+  justify-content: center;
 }
-.alazkar .holder .pages a {
-  display: block;
+.alazkar .pages a {
+  display: inline-block;
   border-radius: 12px;
   text-align: center;
   color: var(--text-color);
   background: var(--background-color-l);
   transition: var(--main-transition);
 }
-.alazkar .holder .pages a:hover {
+.alazkar .pages a:hover {
   transform: scale(1.08, 1.08);
   box-shadow: 4px 4px 20px 0 rgb(0 0 0 / 15%);
 }
-.alazkar .holder .pages a .image img {
+.alazkar .pages a .image img {
   max-width: 100%;
   height: fit;
   border-radius: 12px 12px 0 0;
 }
-.alazkar .holder .pages .text {
+.alazkar .pages .text {
   padding: 30px;
 }
-.alazkar .holder .pages a h2 {
+.alazkar .pages a h2 {
   margin: 0 0 15px 0;
   font-size: 25px;
 }
-.alazkar .holder .pages a p {
+.alazkar .pages a p {
   font-size: 17px;
 }

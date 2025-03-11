@@ -1,0 +1,150 @@
+:root {
+  --main-padding: 60px;
+  --background-color-l: rgba(243, 204, 89, 0.22);
+  --background-color-s: rgb(61, 27, 7);
+  --main-transition: 0.3s;
+  --text-color:rgb(239, 186, 28);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+
+.azkar2 {
+  padding: var(--main-padding) 0;
+  background: white;
+}
+.azkar2 .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+h1.main-title {
+  width: fit-content;
+  font-size: 50px;
+  color: var(--text-color);
+  position: relative;
+}
+h1.main-title::before {
+  content: ">";
+  position: absolute;
+  color: brown;
+  font-size: 40px;
+  top: 6px;
+  left: -35px;
+}
+.azkar2 .title .main-page {
+  display: block;
+  color: var(--text-color);
+  font-size: 20px;
+  background-color: var(--background-color-s);
+  padding: 3px;
+  border-radius: 5px;
+}
+.container {
+    width: 80%;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+.azkar2 .titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  background: var(--background-color-l);
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+.azkar2 .titles a {
+  display: inline-block;
+  position: relative;
+  padding: 1.2rem 2rem;
+  border: 1px solid rgba(154, 38, 38, 0.21);
+  color: var(--background-color-s);
+  font-size: 22px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: var(--main-transition);
+}
+.azkar2 .titles button {
+  border-radius: 40px;
+}
+.azkar2 .titles a:hover {
+  background: brown;
+  color: var(--text-color);
+}
+
+/* Alzekr */
+/* Side bar */
+.azkar2 .Duaa {
+  margin: 40px 0;
+}
+.azkar2 .Duaa .current-duaa {
+  padding: 20px;
+  background: var(--background-color-l);
+  border-radius: 10px;
+}
+.azkar2 .Duaa .current-duaa .duaa-title {
+  margin: 30px auto;
+  width: fit-content;
+  font-size: 35px;
+}
+.azkar2 .Duaa .current-duaa .text-area {
+  font-size: 25px;
+  line-height: 2;
+}
+.azkar2 .Duaa .current-duaa .text-area small {
+  background: var(--text-color);
+  border-radius: 2px;
+  padding: 2px 6px;
+}
+.azkar2 .Duaa .current-duaa .text-area p {
+  font-weight: 400;
+}
+.azkar2 .Duaa .current-duaa .text-area span.ayah {
+  color: rgb(255, 191, 0);
+}
+.azkar2 .Duaa .other-pages {
+  margin: 30px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.azkar2 .Duaa .other-pages a {
+  display: block;
+  color: black;
+  transition: var(--main-transition);
+  font-weight: 500;
+}
+.azkar2 .Duaa .other-pages a.previous-duaa:hover {
+  transform: translate(7px);
+}
+.azkar2 .Duaa .other-pages a.next-duaa:hover {
+  transform: translate(-7px);
+}

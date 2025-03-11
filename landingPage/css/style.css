@@ -1,0 +1,344 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    color: #644104;
+    background-color: #3a2501;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+.logo {
+    font-family: "Aref Ruqaa", serif;
+    font-size: 40px;
+    position: relative;
+    background: linear-gradient(#BD9755, #795233);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #f1e1d5f7;
+    border-radius: 50%;
+    z-index: -1;
+    right: -4px;
+    box-shadow: 3px 3px 7px #795233;
+    top: -3px;
+}
+header {
+    background-color: #44230d22;
+    padding: 10px 0 15px 30px;
+    overflow: hidden;
+    box-shadow: 3px 3px 7px #1a1008;
+}
+nav ul li a {
+    color: white;
+    font-size: 19px;
+    padding: 13px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+nav ul li a:hover {
+    color: #7b5107;
+    border-bottom: 3px solid #7b5107;
+}
+nav .toggle {
+    display: none;
+    font-size: 30px;
+    color: #7b5107;
+}
+.dropdown-menu {
+    display: none;
+    height: 0;
+    position: absolute;
+    left: 2rem;
+    top: 90px;
+    width: 300px;
+    color: antiquewhite;
+    background-color: #44230d22;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    z-index: 10;
+}
+.dropdown-menu.open {
+    height: 305px;
+}
+.dropdown-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 18px;
+}
+.dropdown-menu li a {
+    color: white;
+}
+.dropdown-menu li:hover {
+    /* color :#BD9755; */
+    background-color: #7b5107;
+}
+
+/* responsive */
+@media(max-width: 992px) {
+    header .container nav ul {
+        display: none;
+    }
+
+    header .toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+}
+
+/* hero section */
+.hero {
+    height: 87vh;
+    background-image: url(/images/hero6.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -9;
+}
+.hero .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: -8;
+    width: 100%;
+    height: 100%;
+    background-color: #dfccbe97;
+}
+.main-aya h3 {
+    font-size: 28px;
+    color: #3a2501;
+    font-weight: bold;
+    padding: 20px 0;
+}
+.main-aya h5 {
+    font-size: 24px;
+    color: #744900;
+    font-weight: bold;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.main-aya h1 {
+    font-size: 44px;
+    color: #3a2501;
+    padding: 0px 0 20px;
+}
+
+.main-aya h1 span {
+    font-size: 20px;
+    color: #744900;
+
+}
+.main-aya p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3a2501;
+}
+/* prayer */
+.prayer-time {
+    background-color: #f1decd87;
+    width: 400px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.prayer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #644104;
+}
+.prayer-header h1 {
+    padding-left: 8px;
+}
+
+.prayer-head-row {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.prayer-head-row span {
+    font-size: 16px;
+
+}
+
+.hero .content .prayer-head-row:hover {
+    background-color: black;
+    color: #f1decd;
+
+}
+
+/* responsive */
+@media(max-width: 992px) {
+    .hero .prayer-time{
+        display: none;
+    }
+    
+}
+@media(max-width: 580px) {
+    .hero .main-aya h1{
+        font-size: 30px;
+    }
+.hero .main-aya h5 {
+    font-size: 23px;
+}
+.hero .main-aya p {
+    font-size: 23px;
+}
+}
+
+/* footer */
+footer{
+    width: 100%;
+    /* position: absolute; */
+    bottom: 0;
+    background-color: #f1decd ;
+    color: #ccc;
+    padding: 100px 0 30px;
+    border-top-right-radius: 195px;
+        border-top-left-radius: 195px;
+    font-size: 13px;
+    line-height: 20px;
+}
+footer .row{
+width:85%;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: space-between;
+}
+footer .row .col{
+    flex-basis: 25%;
+    padding: 10px;
+
+
+}
+footer .row .col p{
+    color: #1a1008;
+    line-height: 2;
+}
+footer .row .col .footer-logo{
+    width: 80px;
+    margin-bottom: 30px;
+    font-family: "Aref Ruqaa", serif;
+        font-size: 40px;
+        position: relative;
+    color: #795233;
+
+}
+footer .row .col i{
+    font-size: 25px;
+    padding: 15px 7px;
+    color: #3a2501;
+}
+footer .row .col i:hover{
+    color: #795233;
+}
+footer .row .col h3{
+    width: fit-content;
+    margin-bottom: 30px;
+    color: #3a2501;
+
+}
+footer .row .col li{
+    padding: 10px 0;
+
+}
+footer .row .col li a{
+    color: #3a2501;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom:1px solid #3a2501;
+    margin: 20px auto;
+}
+footer .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3a2501;
+    
+}
+footer .copy span{
+    font-family: "Aref Ruqaa", serif;
+    font-size: 30px;
+    color: #795233;
+    position: relative;
+    bottom: -8px;
+    right: -5px;
+}
