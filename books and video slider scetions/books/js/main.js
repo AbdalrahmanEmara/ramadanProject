@@ -13,7 +13,7 @@ let books = [
 
 function displayBooks() {
     let gridContainer = document.getElementById("booksGrid");
-    gridContainer.innerHTML = ""; // Clear previous content
+    
 
     books.forEach(book => {
         let bookItem = document.createElement("div");

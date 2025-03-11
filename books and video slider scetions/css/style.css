@@ -4,203 +4,57 @@
     box-sizing: border-box;
 	text-decoration: none
 }
-a:visited {
-    color: white; /* Ensures the color remains the same after visiting */
+:root{
+    --main-color: rgba(243, 204, 89, 0.22);
+    --btn-color: #3d1b07;
+    --btn-hover: #3d1b07b2;
+    --section-padding: 20px;
+    --text-color: rgb(239, 186, 28);
 }
+
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 
-body, html{
-		width: 100%;
-		height: 100%;	
-		margin: 0;
-		font-family: "IBM Plex Sans Arabic", sans-serif;
-		overflow-X: hidden;/* optional */
-	}
-
-#i1, #i2, #i3{ display: none;}
-.video-slider{
-	background-image: url(../img/final_enhanced_image.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.container {
-    position: relative;
-    height: 0;
-    padding-bottom: 38%; 
-    user-select: none;
-    width: 90%;
-    margin: 0 auto;
-}
-@media (max-width: 1024px) {
-    .container {
-        padding-bottom: 45%;
-    }
-}
-@media (max-width: 768px) {
-    .container {
-        padding-bottom: 50%;
-    }
-}
-@media (max-width: 480px) {
-    .container {
-        padding-bottom: 60%; 
-    }
-}
-.player{
-    height: 100%;
-    width: 100%;
-	aspect-ratio: 16/9;
-	border-radius: 20px;
+.container{
+    width: 85%;
+    margin: 0px auto;
+    padding: 0px var(--section-padding);
 }
 .title{
     height: 10vh;
-    background-color: #9f9c9a;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-	border-bottom: 1px solid #d29e5b;
-	width: 90%; 
+	border-bottom: 1px solid var(--btn-color);
 	margin: 0px auto; 
 	margin-bottom: 10px;
 	position: relative;
 }
-.video-slider .title::after{
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    right: 0;
-    width: 97px;
-    height: 3px;
-    background-color: #d29e5b;
-}
-.video-slider .title{
-	background-image: url(../img/final_enhanced_image.png);
-	background-size: cover;
-}
 
-.video-slider .title .text{
-    font-size: clamp(2rem, 2vw, 2rem); 
-    text-align: center;
-    font-weight: 800;
-    color: black;
-	margin: 0px;
-    font-family: "IBM Plex Sans Arabic", sans-serif;
-}
-
-
-.container .slide_img{
-    position: absolute;
-    width: 100%;;
-    height: 100%;
-	
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.next { right: 10px; }
-.prev { left: 10px; }
-
-.prev:hover, .next:hover {
-    background: rgba(255, 162, 0, 0.8);
-	color: white;
-}
-.prev:hover i, .next:hover i{
-	color: white;
-}
-label i{
-	font-size: 2rem;
-	color: rgb(255, 162, 0);
-} 
-.container #nav_slide{
-	width: 50%;
-	bottom: 0px;
-	left: 50%;
-	transform: translate(-50%, 0%);
-	position: absolute;
-	z-index: 99;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-	
-}
-
-#nav_slide .dots{
-	width: 30px;
-	height: 5px;
-	margin: 0 4px;
-	display: inline-block;
-	background-color: #d29e5bc2;
-	transition: .4s;
-	border-radius: 3px;
-}
-
-#nav_slide .dots:hover {
-	cursor: pointer;
-	background-color: rgb(255, 162, 0);
-	transition: .25s;
-	border: 1px solid black;
-}
-
-.slide_img{z-index: -1;}
-
-	#i1:checked ~ #one  ,
-	#i2:checked ~ #two  ,
-	#i3:checked ~ #three,
-	#i4:checked ~ #four ,
-	#i5:checked ~ #five 
-	{z-index: 9; animation: scroll 1s ease-in-out;}
-
-	#i1:checked  ~  #nav_slide #dot1,
-	#i2:checked  ~  #nav_slide #dot2,
-	#i3:checked  ~  #nav_slide #dot3,
-	#i4:checked  ~  #nav_slide #dot4,
-	#i5:checked  ~  #nav_slide #dot5
-	{ background-color: rgb(255, 162, 0);border: 2px solid black;}
-
-@keyframes scroll{
-	0%{	opacity:.4;}
-	100%{opacity:1;}
-}		
 /* end videos slider section ********************************************************************************************************************* */
 
 /* start books slider section ********************************************************************************************************************* */
 .books{
-	margin-bottom: 500px;
-	background-color: #E6E2DF;
+	background-color: var(--main-color);
 }
 .swiper {
 	width: 100%;
 	height: 100%;
-	background-color: #E6E2DF;
 	margin-top: 20px;
 }
-
+a:visited {
+    color: white; /* Ensures the color remains the same after visiting */
+}
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
-	background: #E6E2DF;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+	padding: 10px;
+    border-radius: 5px;
 }
 
-.swiper-wrapper img {
+.swiper-wrapper {
 	display: block;
 	width: 100%;
 }
@@ -209,7 +63,7 @@ label i{
 	width: 100%;
 	padding: 5px;
 	border: none;
-	background-color: #d29e5bc2;
+	background-color: var(--btn-hover);
 	color: white;
 	cursor: pointer;
 	font-size: 1rem;
@@ -218,10 +72,10 @@ label i{
 }
 .btn:focus,
 .btn:hover{
-	background-color: #d29e5b;
+	background-color: var(--btn-color);
 }
 .swiper-pagination span{
-	background-color: #d29e5b;
+	background-color: var(--text-color) !important;
 	border: 1px solid black;
 }
 .books .title {
@@ -229,9 +83,11 @@ label i{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E6E2DF;
     color: black;
     position: relative;
+}
+.cxs{
+    justify-content: space-between !important;
 }
 .books .title::after{
     content: "";
@@ -240,20 +96,20 @@ label i{
     right: 0;
     width: 97px;
     height: 3px;
-    background-color: #d29e5b;
+    background-color: var(--btn-color);
 }
-.books .title .text {
+.books .title .text{
     font-size: clamp(1rem, 2vw, 1.5rem); 
     text-align: center;
     font-weight: 800;
-    color: black;
+    color: var(--text-color);
 	margin: 0px;
     font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 .title button {
     border: none;
-    background-color: #d29e5be4;
+    background-color: var(--btn-hover);
     font-size: clamp(1rem, 2vw, 1.5rem); 
     color: white;
     padding: 0.5vh 1vw; 
@@ -264,7 +120,76 @@ label i{
 }
 
 .title button:hover {
-    background-color: rgb(230, 140, 0);
+    background-color: var(--btn-color);
 	color: black; 
 }
 /* end books slider section ********************************************************************************************************************* */
+/* start videos slider section ********************************************************************************************************************* */
+.video-slider2{
+    background-color:var(--main-color) ;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper2 {
+    height: 0%; 
+    background: #ddd; 
+}
+
+.mySwiper2 .swiper-slide {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.swiper-button-next2,
+.swiper-button-prev2 {
+  color: var(--text-color) !important; /* Adjust color if needed */
+}
+.player{
+    height: 100%;
+    width: 100%;
+	aspect-ratio: 17/9;
+	border-radius: 20px;
+}
+.video-slider2 .title::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 97px;
+    height: 3px;
+    background-color: var(--btn-color);
+}
+
+.video-slider2 .title .text{
+    font-size: clamp(2rem, 2vw, 2rem); 
+    text-align: center;
+    font-weight: 800;
+    color: var(--text-color);
+	margin: 0px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.edit-slide{
+
+    border-radius: 20px;
+}
+/* end videos slider section *******************************************************************************************************************************************************************/

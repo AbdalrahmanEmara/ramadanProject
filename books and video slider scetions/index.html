@@ -14,57 +14,53 @@
     rel="stylesheet">
 </head>
 <body >
-    <!-- start slider section -->
-    <section class="video-slider">
-        <div class="title">
-            <p class="text">المرئيات</p>
-        </div>
-        <div class="container" >
-            <input type="radio" id="i1" name="images" checked />
-            <input type="radio" id="i2" name="images" />
-            <input type="radio" id="i3" name="images" />  
-                
-            <div class="slide_img" id="one">			
-                <iframe class="player slider" src="https://www.youtube.com/embed/HWEu4RhaNIg?si=s5adc4TAgH64lhuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <label class="prev" for="i3"><i class="fa-solid fa-arrow-left"></i></label>
-                <label class="next" for="i2"><i class="fa-solid fa-arrow-right"></i></label>	
-            </div>
-            
-            <div class="slide_img" id="two">
-                <iframe class="player slider" src="https://www.youtube.com/embed/-zMW2Rqjwcc?si=dUFsOrVDi3BkvHF6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <label class="prev" for="i1"><i class="fa-solid fa-arrow-left"></i></label>
-                <label class="next" for="i3"><i class="fa-solid fa-arrow-right"></i></label>
-            </div>
-                    
-            <div class="slide_img" id="three">
-                <iframe class="player slider" src="https://www.youtube.com/embed/COogWP0kKCc?si=dh-1ZTNVZLIR8xrn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <label class="prev" for="i2"><i class="fa-solid fa-arrow-left"></i></label>
-                <label class="next" for="i1"><i class="fa-solid fa-arrow-right"></i></label>
-            </div>
-        
-            <div id="nav_slide">
-                <label for="i1" class="dots" id="dot1"></label>
-                <label for="i2" class="dots" id="dot2"></label>
-                <label for="i3" class="dots" id="dot3"></label>
-            </div>
-                
-        </div>
-    </section>
-    <!-- end video slider section -->
     <!-- start books section -->
     <section class="books">
-        <div class="title ">
-            <button > <a href="books/books.html">عرض المزيد</a></button>
-            <p class="text">الكتب المترجمة</p>
-        </div>
-        <div class="swiper mySwiper" style="width: 90%; ">
-            <div class="swiper-wrapper">
-                <!-- slides -->
+        <div class="container">
+            <div class="title cxs">
+                <button > <a href="books/books.html">عرض المزيد</a></button>
+                <p class="text">الكتب المترجمة</p>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- slides -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
     <!-- end books section -->
+    <!-- start video section -->
+    <section class="video-slider2">
+        <div class="container">
+            <div class="title">
+                <p class="text">المرئيات</p>
+            </div>
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide edit-slide edit-slid">
+                        <iframe class="player slider" src="https://www.youtube.com/embed/HWEu4RhaNIg?si=s5adc4TAgH64lhuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide edit-slide">
+                        <iframe class="player slider" src="https://www.youtube.com/embed/-zMW2Rqjwcc?si=dUFsOrVDi3BkvHF6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide edit-slide">
+                        <iframe class="player slider" src="https://www.youtube.com/embed/COogWP0kKCc?si=dh-1ZTNVZLIR8xrn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide edit-slide">
+                        <iframe class="player slider" src="https://www.youtube.com/embed/FhVv2Ovy0T0?si=WkJ2Wjh5Zv_KJtke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide edit-slide">
+                        <iframe class="player slider" src="https://www.youtube.com/embed/Yu2MXe4EhDA?si=D0Ldgxgy6AGNmli2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button-next2"></div>
+                <div class="swiper-button-prev swiper-button-prev2"></div>
+                <div class="swiper-pagination swiper-pagination2"></div>
+            </div>
+        </div>
+    </section>
+    <!-- end video section -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

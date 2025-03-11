@@ -53,3 +53,14 @@ if (swiperWrapper) {
     });
     swiper.update();
 } 
+var swiper2 = new Swiper(".mySwiper2", {
+    pagination: {
+      el: ".swiper-pagination2",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next2",
+      prevEl: ".swiper-button-prev2",
+    },
+});
+
