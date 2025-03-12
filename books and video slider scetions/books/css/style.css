@@ -29,6 +29,10 @@
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .book img {
@@ -46,6 +50,9 @@
 
 .book:hover {
     transform: scale(1.05);
+}
+a{
+    text-decoration: none;
 }
 .btn{
 	width: 100%;
