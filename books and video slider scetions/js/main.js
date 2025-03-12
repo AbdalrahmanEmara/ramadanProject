@@ -10,8 +10,8 @@ var swiper = new Swiper(".mySwiper", {
     },
     breakpoints: {
         320: { slidesPerView: 2 }, // Small screens (phones)
-        480: { slidesPerView: 4 }, // Slightly larger phones
-        768: { slidesPerView: 5 }, // Tablets
+        480: { slidesPerView: 3 }, // Slightly larger phones
+        768: { slidesPerView:4 }, // Tablets
         1024: { slidesPerView: 6 }, // Small laptops
         1280: { slidesPerView: 7 }, // Large screens
         1440: { slidesPerView: 8 }  // Full-size desktops
@@ -41,7 +41,7 @@ if (swiperWrapper) {
         slide.classList.add("swiper-slide"); 
 
         slide.innerHTML = `
-            <div>
+            <div class="img-holder">
                 <img src="${book.image}" alt="${book.name}" onerror="this.src='./img/default.png'"/>
             </div>
             <div class="book-content">
