@@ -46,7 +46,7 @@ if (swiperWrapper) {
             </div>
             <div class="book-content">
                 <p>${book.name}</p>
-                <a class="btn" href="${book.url}">المزيد</a>
+                <a class="btn" href="${book.url}" target="_blank" rel="noopener noreferrer">المزيد</a>
             </div>
         `;
         swiperWrapper.appendChild(slide);

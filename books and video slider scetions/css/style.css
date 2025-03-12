@@ -74,6 +74,16 @@ a:visited {
     font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    left: 50%!important;
+    width: 100%;
+    bottom: -3px!important;
+    width: 50%!important;
+    transform: translateX(-50%) !important;
+}
 .btn{
     display: block;
 	width: 100%;
