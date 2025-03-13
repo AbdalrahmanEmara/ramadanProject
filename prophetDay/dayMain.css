@@ -1,0 +1,110 @@
+:root {
+  --main-padding: 60px;
+  --background-color-l: #f3cc5938;
+  --background-color-s: #3d1b07;
+  --main-transition: 0.3s;
+  --text-color: #efba1c;
+  --bg-color: #3a2501;
+  --pre-color: #7b5107;
+  --main-color: #3a2501;
+  --pre-font: #f1decd;
+  --main-color: rgba(243, 204, 89, 0.22);
+  /* Light gold background */
+  --btn-color: #3d1b07;
+  --btn-hover: #3d1b07b2;
+  --section-padding: 20px;
+  --text-color: rgb(239, 186, 28);
+  /* Gold text */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--background-color-l);
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+.prophetDay {
+  padding: var(--main-padding) 0;
+  background-image: url(./imgs/ze-paulo-gasparotto-GeReAnOMiZ8-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  margin: 5rem 0;
+}
+.prophetDay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  opacity: 0.5;
+}
+@media (min-width: 768px) {
+  .prophetDay {
+    margin: 5rem;
+    border-radius: 4rem;
+  }
+  .prophetDay::before {
+    border-radius: 4rem;
+  }
+}
+.container {
+  width: 85%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+.prophetDay .text {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  color: #ffc107;
+}
+.prophetDay .text h2.title {
+  margin: 30px 0;
+  font-size: 3.3rem;
+}
+@media (max-width: 767px) {
+  .prophetDay .text h2.title {
+    font-size: 2.8rem;
+  }
+}
+.prophetDay .text p.description {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+.prophetDay .more-details {
+  position: relative;
+}
+.prophetDay .more-details a {
+  background: var(--text-color);
+  color: var(--btn-color);
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: var(--main-transition);
+}
+.prophetDay .more-details a:hover {
+  color: var(--text-color);
+  background: var(--btn-color);
+}
