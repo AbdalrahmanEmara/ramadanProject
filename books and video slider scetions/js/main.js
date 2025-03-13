@@ -28,8 +28,8 @@ let books = [
     { name: "التمسك بالسنة", image: "./img/4.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/feEwev0UUHiAmTu44G4RUUE1tlNiJ0FJmmUZmJCi.pdf"},
     { name: "الخلاف بين العلماء", image: "./img/5.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/j88YUnmizlnSdsfKgLlp8XesJNlaqfBzvpeAdG4j.pdf"},
     { name: "مكارم الأخلاق", image: "./img/6.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/2TSIEsiymWdSHNNTasU5ZLfKi9mYrtv0el44bdQh.pdf"},
-    { name: "من الأحكام الفقهية في الطهارة والصلاة والجنائز", image: "./img/7.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/h6GCK7mectZvd9oEyqSBcxUxFoTiazomb3MrfIRb.pdf"},
-    { name: "ستون سؤالا في أحكام الحيض والنفاس", image: "./img/8.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/udjv4bLWNVb3AbORgXOOAA0bdjWlknisUazsp7Dt.pdf"},
+    { name: "من الأحكام الفقهية في الطهارة  ", image: "./img/7.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/h6GCK7mectZvd9oEyqSBcxUxFoTiazomb3MrfIRb.pdf"},
+    { name: "ستون سؤالا في أحكام الحيض ", image: "./img/8.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/udjv4bLWNVb3AbORgXOOAA0bdjWlknisUazsp7Dt.pdf"},
     { name: "رسالة في مواقيت الصلاة", image: "./img/9.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/U4YtC46myREiRGBTt6IF8KeJhAt12Y3aKhCQ8SD4.pdf"},
     { name: " رسالة في سجود السهو", image: "./img/10.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/zgcKXDJ1lBKl5g69PdOrsVZ59Vfr6l055iocA5vk.pdf"}
 ];
