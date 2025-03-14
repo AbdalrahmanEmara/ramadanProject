@@ -28,17 +28,17 @@
 
 <body dir="rtl">
     <!-- navbar -->
-    <header style="top: 0px;">
+    <header>
         <div class="container flex-between">
             <div class="logo">
-                <a href="index.html">رفيق</a>
+                <a href="index.html"><img src="../ramadanProject-main/imgs/رفيق.png" alt=""></a>
             </div>
             <nav>
                 <ul class=" flex-between ">
                     <li><a href="dayRules.html">النهج المحمدي</a></li>
-                    <li><a href="hadeth.html">الأحاديث</a></li>
+                    <li><a href="اذكارالصباح.html">الأذكار</a></li>
                     <li><a href="todo.html">قائمة المهام يومية</a></li>
-                    <li><a href="voice.html">الصوتيات</a></li>
+                    <li><a href="المرايات.html">الصوتيات</a></li>
                 </ul>
                 <div class="toggle">
                     <i class="fa-solid fa-bars"></i>
@@ -48,15 +48,15 @@
         <!-- toggle -->
         <ul class="dropdown-menu">
             <li><a href="dayRules.html">النهج المحمدي</a></li>
-            <li><a href="hadeth.html">الأحاديث</a></li>
+            <li><a href="اذكارالصباح.html">الأذكار</a></li>
             <li><a href="todo.html">قائمة المهام يومية</a></li>
-            <li><a href="voice.html">الصوتيات</a></li>
+            <li><a href="المرايات.html">الصوتيات</a></li>
         </ul>
     </header>
-    <div class="books" style="margin-top: 85px;">
+    <div class="books">
         <div class="container">
             <div class="title ">
-                <p class="text">الكتب المترجمة <i class="fa-solid fa-mosque"></i></p>
+                <h1 class="main-title">الكتب المترجمة <i class="fa-solid fa-mosque"></i></p>
             </div>
             <div class="books-grid" id="booksGrid"></div>
         </div>
@@ -107,21 +107,10 @@
             <h5><span>رفيق</span> جميع الحقوق محفوظة © 2025</h5>
         </div>
     </footer>
+    <script src="JS/main.js"></script>
 
 
     <script>
-        let books = [
-    { name: "مباحث في أصول الدين", image: "./imgs/1.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/do5UqLso9w11kvAs6fMsQUuBoQX06xebtX10ekxE.pdf"},
-    { name: "أسماء الله وصفاته", image: "./imgs/2.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/Q7Dx2ww1JWl8NY5cSNTqyhJVI7Yyfks7ePcuzutZ.pdf"},
-    { name: "الإبداع في كمال الشرع", image: "./imgs/3.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/OZoao0IWxhhe3YksNNBC7I7P8T0CRsw3bhI0geMt.pdf"},
-    { name: "التمسك بالسنة", image: "./imgs/4.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/feEwev0UUHiAmTu44G4RUUE1tlNiJ0FJmmUZmJCi.pdf"},
-    { name: "الخلاف بين العلماء", image: "./imgs/5.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/j88YUnmizlnSdsfKgLlp8XesJNlaqfBzvpeAdG4j.pdf"},
-    { name: "مكارم الأخلاق", image: "./imgs/6.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/2TSIEsiymWdSHNNTasU5ZLfKi9mYrtv0el44bdQh.pdf"},
-    { name: "من الأحكام الفقهية في الطهارة  ", image: "./imgs/7.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/h6GCK7mectZvd9oEyqSBcxUxFoTiazomb3MrfIRb.pdf"},
-    { name: "ستون سؤالا في أحكام الحيض والنفاس", image: "./imgs/8.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/udjv4bLWNVb3AbORgXOOAA0bdjWlknisUazsp7Dt.pdf"},
-    { name: "رسالة في مواقيت الصلاة", image: "./imgs/9.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/U4YtC46myREiRGBTt6IF8KeJhAt12Y3aKhCQ8SD4.pdf"},
-    { name: " رسالة في سجود السهو", image: "./imgs/10.png" ,url:"https://shekhcp.binothaimeen.net/storage/translated-books/2024-09-08/zgcKXDJ1lBKl5g69PdOrsVZ59Vfr6l055iocA5vk.pdf"}
-];
 
 function displayBooks() {
     let gridContainer = document.getElementById("booksGrid");
@@ -143,7 +132,7 @@ function displayBooks() {
 
 displayBooks(); // Call function to render books
     </script>
-    <script src="JS/main.js"></script>
+    
 </body>
 
 </html

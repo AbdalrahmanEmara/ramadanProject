@@ -1,3 +1,29 @@
+// const header = document.querySelector("header");
+// header.innerHTML = `<header>
+//         <div class="container flex-between">
+//             <div class="logo">
+//                 <a href="index.html">رفيق</a>
+//             </div>
+//             <nav>
+//                 <ul class=" flex-between ">
+//                     <li><a href="dayRules.html">النهج المحمدي</a></li>
+//                     <li><a href="اذكارالصباح.html">الأذكار</a></li>
+//                     <li><a href="todo.html">قائمة المهام يومية</a></li>
+//                     <li><a href="المرايات.html">الصوتيات</a></li>
+//                 </ul>
+//                 <div class="toggle">
+//                     <i class="fa-solid fa-bars"></i>
+//                 </div>
+//             </nav>
+//         </div>
+//         <!-- toggle -->
+//         <ul class="dropdown-menu">
+//             <li><a href="dayRules.html">النهج المحمدي</a></li>
+//             <li><a href="اذكارالصباح.html">الأذكار</a></li>
+//             <li><a href="todo.html">قائمة المهام يومية</a></li>
+//             <li><a href="المرايات.html">الصوتيات</a></li>
+//         </ul>
+//     </header>`
 //nav bar
 const toggleBtn = document.querySelector(".toggle");
 const toggleBtnIcon = document.querySelector(".toggle i");
