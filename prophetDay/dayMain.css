@@ -40,6 +40,8 @@ ul {
   text-align: center;
   position: relative;
   margin: 5rem 0;
+  transition: var(--main-transition);
+  box-shadow: 5px 5px 30px 0 rgb(0 0 0 / .5);
 }
 .prophetDay::before {
   content: "";
@@ -55,6 +57,9 @@ ul {
   .prophetDay {
     margin: 5rem;
     border-radius: 4rem;
+  }
+  .prophetDay:hover {
+    transform: scale(1.05, 1.05);
   }
   .prophetDay::before {
     border-radius: 4rem;
