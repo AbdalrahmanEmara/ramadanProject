@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafiq</title>
+    <link rel="icon" href="images/title.png" type="image/x-icon" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- logo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Courgette&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body dir="rtl">
+    <header>
+        <div class="container flex-between">
+            <div class="logo">
+                <a href="index.html">رفيق</a>
+            </div>
+            <nav>
+                <ul class=" flex-between ">
+                    <li><a href="dayRules.html">النهج المحمدي</a></li>
+                    <li><a href="hadeth.html">الأحاديث</a></li>
+                    <li><a href="todo.html">قائمة المهام يومية</a></li>
+                    <li><a href="voice.html">الصوتيات</a></li>
+                </ul>
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+        <!-- toggle -->
+        <ul class="dropdown-menu">
+            <li><a href="dayRules.html">النهج المحمدي</a></li>
+            <li><a href="hadeth.html">الأحاديث</a></li>
+            <li><a href="todo.html">قائمة المهام يومية</a></li>
+            <li><a href="voice.html">الصوتيات</a></li>
+        </ul>
+    </header>
+
+    <section class="azkar-section">
+
+        <h1 class="azkar-title">📖 أذكار المساء</h1>
+        <div class="container-azkar" id="azkarContainer"></div>
+    </section>
+
+    <script>
+        // JSON data for Azkar
+        const azkarSabah = [
+            {
+                category: "أذكار النوم",
+                count: "01",
+                description: "",
+                reference: "",
+                content: "بِاسْمِكَ رَبِّـي وَضَعْـتُ جَنْـبي ، وَبِكَ أَرْفَعُـه، فَإِن أَمْسَـكْتَ نَفْسـي فارْحَـمْها ، وَإِنْ أَرْسَلْتَـها فاحْفَظْـها بِمـا تَحْفَـظُ بِه عِبـادَكَ الصّـالِحـين."
+            },
+            {
+                category: "أذكار النوم",
+                count: "01",
+                description: "",
+                reference: "",
+                content: "اللّهُـمَّ إِنَّـكَ خَلَـقْتَ نَفْسـي وَأَنْـتَ تَوَفّـاهـا لَكَ ممَـاتـها وَمَحْـياها ، إِنْ أَحْيَيْـتَها فاحْفَظْـها ، وَإِنْ أَمَتَّـها فَاغْفِـرْ لَـها . اللّهُـمَّ إِنَّـي أَسْـأَلُـكَ العـافِـيَة."
+            },
+            {
+                category: "أذكار النوم",
+                count: "03",
+                description: "",
+                reference: "",
+                content: "اللّهُـمَّ قِنـي عَذابَـكَ يَـوْمَ تَبْـعَثُ عِبـادَك."
+            },
+            {
+                category: "أذكار النوم",
+                count: "01",
+                description: "",
+                reference: "",
+                content: "بِاسْـمِكَ اللّهُـمَّ أَمـوتُ وَأَحْـيا."
+            },
+            {
+                category: "أذكار النوم",
+                count: "01",
+                description: "",
+                reference: "",
+                content: "الـحَمْدُ للهِ الَّذي أَطْـعَمَنا وَسَقـانا، وَكَفـانا، وَآوانا، فَكَـمْ مِمَّـنْ لا كـافِيَ لَـهُ وَلا مُـؤْوي."
+            },
+            {
+                category: "أذكار النوم",
+                count: "01",
+                description: "",
+                reference: "",
+                content: "اللّهُـمَّ عالِـمَ الغَـيبِ وَالشّـهادةِ فاطِـرَ السّماواتِ وَالأرْضِ رَبَّ كُـلِّ شَـيءٍ وَمَليـكَه، أَشْهـدُ أَنْ لا إِلـهَ إِلاّ أَنْت، أَعـوذُ بِكَ مِن شَـرِّ نَفْسـي، وَمِن شَـرِّ الشَّيْـطانِ وَشِـرْكِه، وَأَنْ أَقْتَـرِفَ عَلـى نَفْسـي سوءاً أَوْ أَجُـرَّهُ إِلـى مُسْـلِم ."
+            },
+            {
+                category: "أذكار النوم",
+                count: "01",
+                description: "",
+                reference: "",
+                content: "اللّهُـمَّ أَسْـلَمْتُ نَفْـسي إِلَـيْكَ، وَفَوَّضْـتُ أَمْـري إِلَـيْكَ، وَوَجَّـهْتُ وَجْـهي إِلَـيْكَ، وَأَلْـجَـاْتُ ظَهـري إِلَـيْكَ، رَغْبَـةً وَرَهْـبَةً إِلَـيْكَ، لا مَلْجَـأَ وَلا مَنْـجـا مِنْـكَ إِلاّ إِلَـيْكَ، آمَنْـتُ بِكِتـابِكَ الّـذي أَنْزَلْـتَ وَبِنَبِـيِّـكَ الّـذي أَرْسَلْـت."
+            },
+            {
+                category: "أذكار النوم",
+                count: "33",
+                description: "",
+                reference: "",
+                content: "سُبْحَانَ اللَّهِ."
+            },
+            {
+                category: "أذكار النوم",
+                count: "33",
+                description: "",
+                reference: "",
+                content: "الْحَمْدُ لِلَّهِ."
+            },
+            {
+                category: "أذكار النوم",
+                count: "34",
+                description: "",
+                reference: "",
+                content: "اللَّهُ أَكْبَرُ."
+            }
+        ]
+        // Function to generate Azkar cards
+        function displayAzkar() {
+            const container = document.getElementById("azkarContainer");
+            azkarSabah.forEach(zekr => {
+                const card = document.createElement("div");
+                card.classList.add("card-azkar");
+
+                card.innerHTML = `
+                    <p class="content-azkar">${zekr.content}</p>
+                    <p class="count-azkar">التكرار: ${zekr.count} مرات</p>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Render cards on page load
+        displayAzkar();
+    </script>
+
+</body>
+
+</html>
