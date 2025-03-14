@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafiq</title>
+    <link rel="icon" href="images/title.png" type="image/x-icon" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- logo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Courgette&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body dir="rtl">
+    <!-- navbar -->
+    <header>
+        <div class="container flex-between">
+            <div class="logo">
+                <a href="index.html"><img src="../ramadanProject-main/imgs/رفيق.png" alt=""></a>
+            </div>
+            <nav>
+                <ul class=" flex-between ">
+                    <li><a href="dayRules.html">النهج المحمدي</a></li>
+                    <li><a href="اذكارالصباح.html">الأذكار</a></li>
+                    <li><a href="todo.html">قائمة المهام يومية</a></li>
+                    <li><a href="المرايات.html">الصوتيات</a></li>
+                </ul>
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+        <!-- toggle -->
+        <ul class="dropdown-menu">
+            <li><a href="dayRules.html">النهج المحمدي</a></li>
+            <li><a href="اذكارالصباح.html">الأذكار</a></li>
+            <li><a href="todo.html">قائمة المهام يومية</a></li>
+            <li><a href="المرايات.html">الصوتيات</a></li>
+        </ul>
+    </header>
+    <div class="books">
+        <div class="container">
+            <div class="title ">
+                <h1 class="main-title">الكتب المترجمة <i class="fa-solid fa-mosque"></i></p>
+            </div>
+            <div class="books-grid" id="booksGrid"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <div class="footer-logo"><span>رفيق</span></div>
+                <div class="links">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <p>اجعل رمضانك مختلفًا هذا العام وسِر على خطى المصطفى ﷺ يومًا بيوم. ابدأ رحلتك الايمانيه مع "رفيق" وكن
+                    أقرب إلى الله في
+                    كل
+                    لحظة
+                </p>
+            </div>
+            <div class="col">
+                <h3>
+                    عن رفيق
+                </h3>
+                <ul>
+                    <li><a href="mohamed.html">النهج المحمدي</a></li>
+                    <li><a href="azcar.html">الأذكار</a></li>
+                    <li><a href="hadeth.html">الأحاديث</a></li>
+                    <li><a href="todo.html">قائمة المهام يومية</a></li>
+                    <li><a href="books.html">الكتب</a></li>
+                    <li><a href="voice.html">الصوتيات</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>
+                    المزيد
+                </h3>
+                <ul>
+                    <li><a href="#">سياسة الخصوصيه</a></li>
+                    <li><a href="#">سياسات ملفات الارتباط</a></li>
+                    <li><a href="#">خدمات اخرى</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class=" copy">
+            <h5><span>رفيق</span> جميع الحقوق محفوظة © 2025</h5>
+        </div>
+    </footer>
+    <script src="JS/main.js"></script>
+
+
+    <script>
+
+function displayBooks() {
+    let gridContainer = document.getElementById("booksGrid");
+    
+
+    books.forEach(book => {
+        let bookItem = document.createElement("div");
+        bookItem.classList.add("book");
+
+        bookItem.innerHTML = `
+            <img src="${book.image}" alt="${book.name}">
+            <p>${book.name}</p>
+            <a class="btn" href="${book.url}">المزيد</a>
+        `;
+
+        gridContainer.appendChild(bookItem);
+    });
+}
+
+displayBooks(); // Call function to render books
+    </script>
+    
+</body>
+
+</html
