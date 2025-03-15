@@ -50,7 +50,7 @@
   box-sizing: border-box;
 }
 body {
-  background: var(--background-color);
+  /* background: var(--background-color); */
   font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 a {
@@ -109,19 +109,9 @@ header {
   padding: 10px 0 15px 30px;
   overflow: hidden;
   /* position: fixed; */
-  width: 100%;
   z-index: 100;
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-@media (max-width: 1000px) {
-  nav {
-      justify-content: flex-end;
-  }
-}
+
 nav ul {
   margin: 0 auto 0 auto;
 }
@@ -141,7 +131,7 @@ nav ul li a:hover {
   border-bottom: 3px solid #7b5107;
 }
 nav .toggle {
-  /* display: none; */
+  display: none;
   font-size: 30px;
   color: var(--brown);
 }
@@ -216,6 +206,7 @@ nav .toggle {
   }
 }
 
+
 /* Header */
 
 /* !------------------------------------------------------------------------------------- */
@@ -224,14 +215,14 @@ nav .toggle {
 /* hero */
 .hero {
   height: 91vh;
-  /* background-image: url(../imgs/hero6.jpg); */
+  background-image: url(../imgs/hero6.jpg);
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   z-index: -9;
 }
 .hero .container {
-  margin-top: -300px;
+  margin-top: -100px;
 }
 .hero .content {
   display: flex;
@@ -244,19 +235,18 @@ nav .toggle {
   z-index: -8;
   width: 100%;
   height: 100%;
-  /* background-color:rgba(43, 43, 43, 0.1); */
+  background-color:rgba(255, 150, 59, 0.08);
 }
 .main-aya {
+  color: var(--brown);
 }
 .main-aya h3 {
   font-size: 28px;
-  color:rgb(84, 53, 0);
   font-weight: bold;
   padding: 0px 0 20px;
 }
 .main-aya h5 {
   font-size: 24px;
-  color: #744900;
   font-weight: bold;
   padding: 20px 0;
   display: flex;
@@ -268,15 +258,13 @@ nav .toggle {
   color: var(--text-color);
   padding: 0px 0 20px;
 }
-
 .main-aya h1 span {
   font-size: 20px;
-  color: #744900;
+  color: var(--brown);
 }
 .main-aya p {
   font-size: 24px;
   font-weight: bold;
-  color: var(--main-color);
 }
 /* ----------------------------------------------------prayer----------------------------------------- */
 .prayer-time {
@@ -579,92 +567,7 @@ h1.main-title {
 /* end of alazkar 2*/
 /* Books grid */
 
-.books-grid {
-  padding: 15px 0;
-  direction: ltr;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-.books {
-  /* background-color: var(--main-color) !important; */
-  padding: 10px 0;
-}
-.book {
-  background-color: white;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  align-items: space-between;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
 
-.book img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.book p {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 8px;
-  color: #333;
-}
-
-.book:hover {
-  transform: scale(1.05);
-}
-a {
-  text-decoration: none;
-}
-.btn {
-  width: 100%;
-  padding: 5px;
-  border: none;
-  background-color: var(--btn-hover);
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 10px 0px;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-}
-.btn:focus,
-.btn:hover {
-  background-color: var(--btn-color);
-}
-.books .title {
-  height: 10vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: black;
-  position: relative;
-  border-bottom: 2px solid var(--btn-color);
-  margin-bottom: 10px;
-  position: relative;
-}
-.books .title::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  right: 0;
-  width: 97px;
-  height: 3px;
-  background-color: var(--btn-color);
-}
-.books .title .text {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  text-align: center;
-  font-weight: 800;
-  color: var(--text-color);
-  margin: 0px;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-}
-/* end book page css **********************************************************************************************************************/
 
 /* azkar-pages */
 /* Scrollbar Styling */
@@ -938,23 +841,26 @@ a {
 
 .sirah {
   position: relative;
+  background:rgb(66, 25, 1);
+  color: var(--text-color);
+  overflow: hidden;
 }
 .sirah::before {
   content: "";
   position: absolute;
   width: 6px;
   height: calc(100% - 132px);
-  background: #644104;
+  background: var(--text-color);
   box-shadow: 0px 0px 5px #3d1b07;
-  top: 132px;
+  top: 112px;
   left: 50%;
   margin-left: -3px;
   animation: moveline 9s linear forwards;
 }
 .sirah h1.sirah-title {
-  color: #644104;
+  color: var(--text-color);
   /* height: 50px; */
-  margin: 20px auto;
+  margin: 0px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1049,13 +955,13 @@ a {
   position: absolute;
   border-style: solid;
   border-width: 20px;
-  border-color: transparent transparent transparent #644104;
+  border-color: transparent transparent transparent var(--text-color);
   top: 10px;
   left: 3px;
 }
 .sirah .left-container::after {
   left: calc(100% - 43px);
-  border-color: transparent #644104 transparent transparent;
+  border-color: transparent var(--text-color) transparent transparent;
 }
 
 @media (max-width: 767px) {
@@ -1068,14 +974,14 @@ a {
   }
   .sirah .cnt::after {
     left: calc(100% - 63px);
-    border-color: transparent #644104 transparent transparent;
+    border-color: transparent var(--text-color) transparent transparent;
   }
 }
 .sirah section {
   position: relative;
-  padding: 0 2.2rem 1.3rem 2.2rem;
+  padding: 0 2rem 1.3rem 2rem;
   border-radius: 7px;
-  color: #644104;
+  color: var(--text-color);
   overflow: hidden;
   line-height: 1.6;
 }
@@ -1098,21 +1004,20 @@ a {
 
 /* !------------------------------------------------------------------- */
 /* !------------------------------------------------------------------- */
-
 /* start books slider section ********************************************************************************************************************* */
 .books{
-	/* background-color: var(--main-color); */
+	background-color: var(--main-color);
 }
-.books .title{
+.title{
   height: 10vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 1px solid var(--btn-color);
-  margin: 0px auto; 
-  margin-bottom: 10px;
-  position: relative;
-  direction: ltr;
+border-bottom: 1px solid var(--btn-color);
+margin: 0px auto; 
+margin-bottom: 10px;
+position: relative;
+direction: ltr;
 }
 
 .swiper {
@@ -1120,9 +1025,6 @@ a {
 	height: 100%;
 	margin-top: 20px;
 }
-/* a:visited {
-    color: white !important; 
-} */
 a:active {
     color: white !important;
 }
@@ -1244,7 +1146,7 @@ a:active {
 /* end books slider section ********************************************************************************************************************* */
 /* start videos slider section ********************************************************************************************************************* */
 .video-slider2{
-    /* background-color:var(--main-color) ; */
+    background-color:var(--main-color) ;
 }
 
 .swiper {
@@ -1335,7 +1237,8 @@ a:active {
 }
 .videos{
     background-color: var(--main-color);
-    padding: 20px 0 40px;
+    padding: 30px 0;
+
 }
 .video {
     background-color: white;
@@ -1445,7 +1348,7 @@ a{
 
 }
 .books{
-    /* background-color: var(--main-color); */
+    background-color: var(--main-color);
 }
 .book {
     background-color: white;
@@ -1475,9 +1378,6 @@ a{
 
 .book:hover {
     transform: scale(1.05);
-}
-a{
-    text-decoration: none;
 }
 .btn{
 	width: 100%;
@@ -1523,6 +1423,7 @@ a{
     font-family: "IBM Plex Sans Arabic", sans-serif;
     
 }
+/* end book page css **********************************************************************************************************************/
 /* end book page css **********************************************************************************************************************/
 /* !------------------------------------------------------------------- */
 
